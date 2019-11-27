@@ -1,7 +1,6 @@
 package com.progressoft.induction;
 
 public class Snack {
-//    private SnackType snackType;
     private Money price;
     private int quantity;
 

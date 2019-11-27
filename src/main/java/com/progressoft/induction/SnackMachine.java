@@ -34,7 +34,7 @@ public class SnackMachine {
         if (snack.getPrice().getValue().compareTo(moneyInTransaction.getValue()) < 0) {
             change = moneyInTransaction.subtract(snack.getPrice());
         }
-        checkQuantity(snack);
+        buy(snack);
         return change;
     }
 
@@ -54,18 +54,18 @@ public class SnackMachine {
     }
 
     public Snack chewingGums() {
-        return this.chewingGum;
+        return chewingGum;
     }
 
     public Snack chips() {
-        return this.chips;
+        return chips;
     }
 
     public Snack chocolates() {
-        return this.chocolate;
+        return chocolate;
     }
 
-    private void checkQuantity(Snack snack) {
+    private void buy(Snack snack) {
         if (snack.quantity() > 0) {
             moneyInMachine.setValue(moneyInMachine.add(moneyInTransaction).getValue().setScale(1, RoundingMode.HALF_UP));
             moneyInTransaction.setValue(BigDecimal.ZERO);

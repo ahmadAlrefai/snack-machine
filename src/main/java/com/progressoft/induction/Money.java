@@ -14,7 +14,7 @@ public class Money {
 
 
     public Money(BigDecimal value) {
-        this.setValue(value);
+        setValue(value);
     }
 
     public void setValue(BigDecimal value) {
@@ -25,7 +25,7 @@ public class Money {
     }
 
     public BigDecimal getValue() {
-        return this.value;
+        return value;
     }
 
 
@@ -38,7 +38,7 @@ public class Money {
     public boolean isLessThan(Money dinar) {
         if (dinar == null)
             return false;
-        return this.value.compareTo(dinar.value) < 0;
+        return value.compareTo(dinar.value) < 0;
     }
 
     public Money subtract(Money dinar) {
